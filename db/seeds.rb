@@ -7,3 +7,9 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+# Tell Rails that the commands 'rails db:seed' and 'rails db:fixtures:load' are equivalent
+# run 'rails db.seed' to reset a clean development data
+puts "\n== Seeding the database with fixtures =="
+system("bin/rails db:fixtures:load")
